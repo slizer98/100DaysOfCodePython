@@ -12,6 +12,6 @@ percentage_input = int(input("What percentage tip would you lije to give? 10, 12
 people = int(input("How many people to split the bill? "))
 percentage = (percentage_input / 100) + 1
 total = round(((total_bill / people) * percentage), 2)
+total_format = "{:.2f}".format(total)
 
-print(f"Each person should pay: ${total} ")
-
+print(f"Each person should pay: ${total_format} ")
