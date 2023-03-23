@@ -15,12 +15,15 @@ print(logo)
 while not game_over :
     guess = input("Guess a letter: ").lower()
 
-
+    if guess in display:
+      print(f'You already guessed {guess}')
     for position in range(size_word):
         letter = chosen_word[position]
         if letter == guess:
             display[position] = letter
+
     if guess not in chosen_word:
+        print(f'You guessed {guess}, that\'s not in the word. You lose a life')
         lives -= 1
     print(stages[lives])
 
